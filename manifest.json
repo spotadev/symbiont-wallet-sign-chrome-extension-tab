@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Symbiont",
+  "description": "Demonstrate using  Connect Wallet 2's Web3Modal 3.0.0-beta.4 in a chrome extension tab app",
+  "author": "JD",
+  "homepage_url": "https://www.spotadev.com",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-root.js",
+        "content-react.js"
+      ],
+      "css": [
+        "content-root.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "lion.png",
+        "love_32.png",
+        "minimize.png",
+        "maximize.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

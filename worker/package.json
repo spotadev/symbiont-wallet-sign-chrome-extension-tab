@@ -1,0 +1,13 @@
+{
+  "name": "symbiont-worker",
+  "version": "1.0.0",
+  "description": "Your Chrome Extension Description",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json --outDir build"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.246",
+    "typescript": "^5.2.2"
+  }
+}

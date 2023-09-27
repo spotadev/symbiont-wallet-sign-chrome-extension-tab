@@ -1,0 +1,25 @@
+.BigFloater {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: fixed;
+  z-index: 2147483647;
+  min-height: 100px;
+  min-width: 100px;
+  height: 600px;
+  background-color: yellow;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border-radius: 25px;
+  /* justify-content: flex-end; */
+  /* justify-content: space-between; */
+
+  box-shadow: 5px 5px 8px red, 10px 10px 8px green, 15px 15px 8px yellow;
+  overflow: auto;
+  resize: both;
+  /*transition: 500ms ease-in-out;*/
+  opacity: 0.95;
+  font-size: small;
+}

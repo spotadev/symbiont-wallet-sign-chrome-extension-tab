@@ -1,0 +1,25 @@
+.register {
+  cursor: pointer;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+  color: green;
+  font-weight: 600;
+}
+
+.forgottenPassword {
+  cursor: pointer;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+  color: green;
+  font-weight: 600;
+}
+
+.loginFailed {
+  color: red;
+  padding-left: 0px;
+  padding-top: 8px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+}
