@@ -17,8 +17,11 @@ export default function Login(props: any) {
   const chromeExtensionUrl = `chrome-extension://{extensionHash}`;
 
   const openWalletConnectInNewTab = () => {
-
     chrome.runtime.sendMessage({ action: "openWalletCollectInNewTab" });
+  }
+
+  const openMetaMaskBrowserInNewTab = () => {
+    chrome.runtime.sendMessage({ action: "openMetaMaskBrowserInNewTab" });
   }
 
   const getJSX = () => {
@@ -96,7 +99,7 @@ export default function Login(props: any) {
             <button
               className={appStyle.button}
               style={{ paddingLeft: "20px" }}
-              onClick={openWalletConnectInNewTab}>Connect to Meta Mask Browser Wallet</button>
+              onClick={openMetaMaskBrowserInNewTab}>Connect to Meta Mask Browser Wallet</button>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 
 ## Overview
 
-This Chrome Extension is using Connect Wallet 2's Web3Modal 3.0.0-beta.4 to allow the user to connect their wallet to a tab chrome extension app.
+This Chrome Extension is using Connect Wallet 2's Web3Modal 3.0.2 to allow the user to connect their wallet to a tab chrome extension app.
 
 Note that when an app is openend in a new tab it has a chrome extension url like:
 

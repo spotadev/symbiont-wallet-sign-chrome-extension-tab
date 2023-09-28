@@ -1,4 +1,3 @@
-//import { encryptStringAndSave } from '../content_scripts/app/src/helpers/extension_storage/extensionStorageHelper';
 
 const notifyContentScriptsThatLoggedIn = () => {
   chrome.tabs.query({}, (tabs) => {
@@ -14,14 +13,22 @@ const notifyContentScriptsThatLoggedIn = () => {
 
 const initListeners = () => {
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.action === "openRegisterWalletTab") {
+    if (message.action === "openWalletCollectInNewTab") {
       let fileUrl = chrome.runtime.getURL("tab.html");
-      fileUrl = fileUrl + '#/register';
+      fileUrl = fileUrl + '#/walletconnect';
       chrome.tabs.create({ url: fileUrl });
     }
-    else if (message.action === "loginUsingCrytoWallet") {
-      let jwtToken = message.jwtToken;
-      // encryptStringAndSave('session', jwtToken);
+    else if (message.action === "openMetaMaskBrowserInNewTab") {
+      let fileUrl = chrome.runtime.getURL("tab.html");
+      fileUrl = fileUrl + '#/metamask';
+      chrome.tabs.create({ url: fileUrl });
+    }
+    else if (message.action === "openDisconnectInNewTab") {
+      let fileUrl = chrome.runtime.getURL("tab.html");
+      fileUrl = fileUrl + '#/disconnect';
+      chrome.tabs.create({ url: fileUrl });
+    }
+    else if (message.action === "loggedIn") {
       notifyContentScriptsThatLoggedIn();
     }
   });

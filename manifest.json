@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "version": "1.0",
-  "name": "Symbiont",
-  "description": "Demonstrate using  Connect Wallet 2's Web3Modal 3.0.0-beta.4 in a chrome extension tab app",
+  "name": "Web3Modal 3.0.2 example with floater",
+  "description": "Demonstrate using  Connect Wallet 2's Web3Modal 3.0.2 in a chrome extension tab app with a floater",
   "author": "JD",
   "homepage_url": "https://www.spotadev.com",
   "icons": {
