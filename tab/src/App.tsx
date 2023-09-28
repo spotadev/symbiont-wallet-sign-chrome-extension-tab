@@ -1,8 +1,8 @@
 // import React, { useEffect } from 'react';
 import { Routes, Route, HashRouter } from 'react-router-dom';
-import WalletConnect from './components/connect/WalletConnect';
-import MetaMaskConnect from './components/connect/MetaMaskConnect';
-import Disconnect from './components/connect/Disconnect';
+import WalletConnect from './components/connect/walletconnect/WalletConnect';
+import MetaMaskConnect from './components/connect/metamaskconnect/MetaMaskConnect';
+import Disconnect from './components/disconnect/Disconnect';
 
 
 function App(props: any) {

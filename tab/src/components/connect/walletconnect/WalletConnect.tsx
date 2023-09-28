@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import appStyle from '../../App.module.css';
+import appStyle from '../../../App.module.css';
 
 import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react';
 import { WagmiConfig, useAccount, useSignMessage } from 'wagmi';
 import { arbitrum, mainnet } from 'wagmi/chains';
-import ConnectInfo from './walletconnect/ConnectInfo';
-import Buttons from './walletconnect/Buttons';
-import Sign from './walletconnect/Sign';
+import ConnectInfo from './ConnectInfo';
+import Buttons from './Buttons';
+import Sign from './Sign';
 
 // 1. Get projectId
 const projectId = process.env.REACT_APP_WALLET_CONNECT_PROJECT_ID;
