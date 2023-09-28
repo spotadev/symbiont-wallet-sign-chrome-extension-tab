@@ -77,6 +77,21 @@ export default function Login(props: any) {
               <li>Connect to a Mobile Wallet using Wallet Connect and a QRCode</li>
               <li>Connect to Meta Mask Browser Wallet</li>
             </ul>
+          </div>
+        </div>
+        <div className={appStyle.row}>
+          <div className={appStyle.col_100}>
+            <button
+              className={appStyle.button}
+              onClick={openWalletConnectInNewTab}>Connect to Mobile Wallet</button>
+            <button
+              className={appStyle.button}
+              style={{ paddingLeft: "20px" }}
+              onClick={openMetaMaskBrowserInNewTab}>Connect to Meta Mask Browser Wallet</button>
+          </div>
+        </div>
+        <div className={appStyle.row}>
+          <div className={appStyle.col_100}>
             When you click an option it will open up in a new tab and connect your wallet to
             the chrome extension which looks like:
             <p>
@@ -88,18 +103,6 @@ export default function Login(props: any) {
               however offers a Duplex Port Stream way of connecting to it which is why we can
               offer Meta Mask as a browser wallet connection option.
             </p>
-          </div>
-        </div>
-
-        <div className={appStyle.row}>
-          <div className={appStyle.col_100}>
-            <button
-              className={appStyle.button}
-              onClick={openWalletConnectInNewTab}>Connect to Mobile Wallet</button>
-            <button
-              className={appStyle.button}
-              style={{ paddingLeft: "20px" }}
-              onClick={openMetaMaskBrowserInNewTab}>Connect to Meta Mask Browser Wallet</button>
           </div>
         </div>
       </div>
