@@ -31,7 +31,7 @@ export default function Header(props: any) {
       setContentMode(ContentModeEnum.LOGIN);
     }
     else {
-
+      setContentMode(ContentModeEnum.LOGGED_IN);
     }
   }
 
