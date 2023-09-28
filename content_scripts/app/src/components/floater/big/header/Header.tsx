@@ -8,10 +8,7 @@ export default function Header(props: any) {
 
   const {
     loggedIn,
-    setLoggedIn,
     setContentMode,
-    setErrorMessage,
-    setError,
     setFloaterMaximised
   } = useGlobalStateContext();
 
@@ -41,7 +38,11 @@ export default function Header(props: any) {
         <img src={imagePath} width={imageWidth} draggable="true" style={{ cursor: "move" }} />
         <div className={style.title}>Symbiont</div>
         <div style={{ padding: "6px" }}>
-          <img src={minimizeImagePath} width={widthMinimizeImage} onClick={minimize} />
+          <img
+            src={minimizeImagePath}
+            width={widthMinimizeImage}
+            style={{ cursor: "pointer" }}
+            onClick={minimize} />
         </div>
       </div>
       <div className={appStyle.row}>

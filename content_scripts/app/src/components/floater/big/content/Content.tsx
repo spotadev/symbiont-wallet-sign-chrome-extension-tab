@@ -5,7 +5,7 @@ import ErrorMessage from './error/ErrorMessage';
 
 
 export default function Content(props: any) {
-  const { contentMode, contentModePropsData } = useGlobalStateContext();
+  const { contentMode } = useGlobalStateContext();
 
   switch (contentMode) {
 

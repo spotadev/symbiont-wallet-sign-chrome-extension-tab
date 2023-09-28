@@ -1,7 +1,5 @@
 
 import styles from './BigFloater.module.css';
-import { useRef } from "react";
-import * as ReactDOM from 'react-dom';
 import Header from "./header/Header";
 import Content from "./content/Content";
 

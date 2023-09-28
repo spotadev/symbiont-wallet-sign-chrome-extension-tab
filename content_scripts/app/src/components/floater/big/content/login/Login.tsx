@@ -1,20 +1,18 @@
-import style from './Login.module.css';
 import appStyle from '../../../../../App.module.css';
 import { useGlobalStateContext } from '../../../../../context/GlobalStateContext';
-import { ContentModeEnum } from '../../../../../enums/CurrentModeEnum';
 import { useState } from 'react';
 
 export default function Login(props: any) {
-  const {
-    setContentMode,
-    setLoggedIn,
-  } = useGlobalStateContext();
+  // const {
+  //   setContentMode,
+  //   setLoggedIn,
+  // } = useGlobalStateContext();
 
-  const [connected, setConnected] = useState(false);
-  const [walletAddress, setWalletAddress] = useState(false);
+  const [connected] = useState(false);
+  const [walletAddress] = useState(false);
 
   const extensionHash = chrome.runtime.id;
-  const chromeExtensionUrl = `chrome-extension://{extensionHash}`;
+  const chromeExtensionUrl = `chrome-extension://${extensionHash}`;
 
   const openWalletConnectInNewTab = () => {
     chrome.runtime.sendMessage({ action: "openWalletCollectInNewTab" });
@@ -83,11 +81,12 @@ export default function Login(props: any) {
           <div className={appStyle.col_100}>
             <button
               className={appStyle.button}
-              onClick={openWalletConnectInNewTab}>Connect to Mobile Wallet</button>
+              style={{ float: "none" }}
+              onClick={openWalletConnectInNewTab}>Mobile Wallet</button>
             <button
               className={appStyle.button}
-              style={{ paddingLeft: "20px" }}
-              onClick={openMetaMaskBrowserInNewTab}>Connect to Meta Mask Browser Wallet</button>
+              style={{ float: "none", marginLeft: "20px" }}
+              onClick={openMetaMaskBrowserInNewTab}>Meta Mask Browser Wallet</button>
           </div>
         </div>
         <div className={appStyle.row}>
@@ -95,13 +94,15 @@ export default function Login(props: any) {
             When you click an option it will open up in a new tab and connect your wallet to
             the chrome extension which looks like:
             <p>
-              {chromeExtensionUrl}
+              <span style={{ color: "red" }}>{chromeExtensionUrl}</span>
             </p>
             <p>
               Note that most browser wallets inject their proxy connection into window.ethereum
-              but window.ethereum is not visible within a chrome extension context.  Meta Mask
-              however offers a Duplex Port Stream way of connecting to it which is why we can
-              offer Meta Mask as a browser wallet connection option.
+              but window.ethereum is not visible within a chrome extension context.
+            </p>
+            <p>
+              Meta Mask however offers a Duplex Port Stream way of connecting to it which is
+              why we can offer Meta Mask as a browser wallet connection option.
             </p>
           </div>
         </div>

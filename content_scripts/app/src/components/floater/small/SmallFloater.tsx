@@ -31,7 +31,10 @@ export default function SmallFloater(props: any) {
       style={props.style}>
       <img src={iconImagePath} width={widthIconImage} style={{ cursor: "move" }} />
       <div style={{ padding: "4px" }}>
-        <img src={maximizeImagePath} width={widthMaximizeImage}
+        <img src={maximizeImagePath}
+          width={widthMaximizeImage}
+          alt="Maximize"
+          style={{ cursor: "pointer" }}
           onClick={maximize} />
       </div>
     </div>
