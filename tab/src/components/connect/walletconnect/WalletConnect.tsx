@@ -39,7 +39,7 @@ export default function WalletConnect() {
   return (
     <WagmiConfig config={wagmiConfig}>
       <div className={appStyle.centeredPage}>
-        <span style={{ fontWeight: 'bold' }}>Demo using Web3Modal 3.0.0-beta.4</span>
+        <span style={{ fontWeight: 'bold' }}>Demo using Web3Modal 3.0.2</span>
         <br /><br />
         This example allows you to connect to your wallet and sign some
         text.  The Sign Button shows once connected.
